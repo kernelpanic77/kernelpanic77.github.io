@@ -20,7 +20,7 @@ import ProjectCard from "../components/ProjectCard";
 import BlogPost from "../components/BlogPost";
 
 const url = "https://google.com";
-const title = "Home - Rithwik";
+const title = "Home - Ishan";
 const description = "Developer and an undergraduate IIIT Bangalore, India.";
 const images = [
   {
