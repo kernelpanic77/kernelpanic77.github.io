@@ -82,7 +82,7 @@ export default function Experience() {
             <VStack
               spacing={4}
               marginTop={3}
-              marginBottom={6}
+              marginBottom={1}
               align="left"
               mx={[0, 0, 6]}
               mt={12}
@@ -106,7 +106,7 @@ export default function Experience() {
               <ExperienceCard
                 companyName="Indywise"
                 companyLink="https://indywise.com"
-                designation="Software Developer Intern"
+                designation="SDE Intern"
                 about="CovIntel"
                 src="/images/indywise.png"
                 alt="Chaos"

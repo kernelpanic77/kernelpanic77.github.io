@@ -64,7 +64,13 @@ const ExperienceCard = ({
             <ExternalLinkIcon opacity={opacity} fontSize="2xl" />
           </Flex>
           <Flex justify="space-between">
-            <Heading as="h4" size="sm" fontWeight="bold" mb={2}>
+            <Heading
+              as="h4"
+              size="sm"
+              fontWeight="bold"
+              marginInline={2}
+              mb={2}
+            >
               {companyName}
             </Heading>
             <Heading as="h4" size="sm" fontWeight="semibold" mb={2}>

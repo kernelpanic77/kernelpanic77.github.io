@@ -10,6 +10,8 @@ import {
   Skeleton,
   Button,
   Divider,
+  IconButton,
+  ButtonGroup,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -18,6 +20,7 @@ import { linkColor } from "../styles/darkMode";
 import Container from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import BlogPost from "../components/BlogPost";
+import { FaRegEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const url = "https://google.com";
 const title = "Home - Ishan";
@@ -133,6 +136,37 @@ export default function Home() {
                   </Button>
                 </ChakraLink>
               </a>
+
+              <ButtonGroup variant="ghost" color="gray.600">
+                <IconButton
+                  borderRadius="10px"
+                  as="a"
+                  href="mailto:sai.rithwik@iiitb.ac.in"
+                  aria-label="eMail"
+                  icon={<FaRegEnvelope fontSize="20px" />}
+                />
+                <IconButton
+                  borderRadius="10px"
+                  as="a"
+                  href="https://www.linkedin.com/in/sai-rithwik-m/"
+                  aria-label="LinkedIn"
+                  icon={<FaLinkedin fontSize="20px" />}
+                />
+                <IconButton
+                  borderRadius="10px"
+                  as="a"
+                  href="https://github.com/DaKeiser"
+                  aria-label="GitHub"
+                  icon={<FaGithub fontSize="20px" />}
+                />
+                <IconButton
+                  borderRadius="10px"
+                  as="a"
+                  href="https://twitter.com/DaKeiser"
+                  aria-label="Twitter"
+                  icon={<FaTwitter fontSize="20px" />}
+                />
+              </ButtonGroup>
             </Flex>
           </Flex>
         </Flex>
