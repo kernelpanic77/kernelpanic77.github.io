@@ -184,7 +184,7 @@ export default function Home() {
           </Heading>
 
           <ProjectCard
-            title="CovIntel"
+            title="Mosip"
             href="https://github.com/DaKeiser/chaos"
             src="/images/chaos-td.png"
             alt="Chaos"

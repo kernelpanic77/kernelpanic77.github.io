@@ -140,14 +140,14 @@ const Experience = () => {
           mt={12}
         >
           <ProjectCard
-            title="CovIntel"
+            title="Lorem"
             href="https://github.com/DaKeiser/chaos"
-            src="/images/chaos-td.png"
+            src="/images/mosip.png"
             alt="Chaos"
           >
-            CovIntel is a one stop AI solution for vaccine surveillance and
-            monitoring. New cases are predicted over a duration, for a given
-            geography and given vaccine and generates visualisations.
+            Esse veniam eu reprehenderit aliqua velit. Irure ullamco minim elit
+            fugiat tempor excepteur nulla dolore tempor aute incididunt elit. In
+            amet anim Lorem et minim velit qui pariatur amet magna.
           </ProjectCard>
         </VStack>
         <Heading>

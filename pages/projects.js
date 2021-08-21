@@ -68,11 +68,11 @@ export default function Project() {
             <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
               <ProjectCardBig
                 key="lorem"
-                imageURL="/images/CovIntel.png"
+                imageURL="/images/mosip.png"
                 title="lorem"
                 desc="Aliqua laboris voluptate velit id non veniam proident laboris Lorem velit non eiusmod aliquip nostrud."
                 githubLink="https://github.com/DaKeiser/chaos"
-                deployLink="http://covintel.centralindia.cloudapp.azure.com:8000/"
+                deployLink="http://google.com/"
                 tag={["Lorem", "Ipsum", "Lorem"]}
               />
               {/*  */}
