@@ -11,6 +11,8 @@ import {
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
+  Avatar,
+  Icon,
 } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 import NextLink from "next/link";
@@ -21,10 +23,10 @@ import React from "react";
 // import useSound from "use-sound";
 
 const LINKS = [
-  {
-    href: "/",
-    text: "Home",
-  },
+  // {
+  //   href: "/",
+  //   text: "Home",
+  // },
   {
     href: "/about",
     text: "About",
@@ -87,17 +89,18 @@ const Navbar = () => {
       mb={8}
       mx="auto"
     >
-      {isBigScreen && (
-        <IconButton
-          borderRadius="10px"
-          aria-label="toggle dark mode"
-          icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
-          onClick={toggleColorMode}
-        />
-      )}
-
       {isBigScreen ? (
-        <Box>{LINKS.map(getLink)}</Box>
+        <Box>
+          <NextLink href={"/"} passHref key={"Home"}>
+            <IconButton variant="ghost">
+              <Avatar
+                size="sm"
+                src="https://avatars.githubusercontent.com/u/42925218?s=60&v=4"
+              ></Avatar>
+            </IconButton>
+          </NextLink>
+          {LINKS.map(getLink)}
+        </Box>
       ) : (
         <IconButton
           borderRadius="10px"
@@ -106,6 +109,15 @@ const Navbar = () => {
           onClick={onOpen}
         />
       )}
+
+      {
+        <IconButton
+          borderRadius="10px"
+          aria-label="toggle dark mode"
+          icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
+          onClick={toggleColorMode}
+        />
+      }
 
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
@@ -118,14 +130,14 @@ const Navbar = () => {
                 height="100%"
                 alignItems="center"
               >
-                <IconButton
-                  borderRadius="10px"
-                  boxSize="50px"
-                  mb="6"
-                  aria-label="toggle dark mode"
-                  icon={colorMode === "dark" ? <SunIcon /> : <MoonIcon />}
-                  onClick={toggleColorMode}
-                />
+                <NextLink href={"/"} passHref key={"Home"}>
+                  <IconButton variant="ghost">
+                    <Avatar
+                      size="sm"
+                      src="https://avatars.githubusercontent.com/u/42925218?s=60&v=4"
+                    ></Avatar>
+                  </IconButton>
+                </NextLink>
                 {LINKS.map(getLink)}
               </Flex>
             </DrawerBody>

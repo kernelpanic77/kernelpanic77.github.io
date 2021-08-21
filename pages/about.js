@@ -133,6 +133,17 @@ export default function About() {
               </ChakraLink>
               !
             </Text>
+
+            <Wrap mb={12}>
+              {Interests.like.map((likes) => (
+                <InterestTag key={likes} name={likes} like />
+              ))}
+            </Wrap>
+            <Wrap mb={12}>
+              {Interests.dislike.map((dislikes) => (
+                <InterestTag key={dislikes} name={dislikes} />
+              ))}
+            </Wrap>
             <Heading letterSpacing="tight" mb={2} as="h1" size="lg">
               Where I&apos;ve lived?
             </Heading>
