@@ -115,7 +115,7 @@ export default function Home() {
               </ChakraLink>
               ,{" "}
               <ChakraLink
-                href="/blog"
+                // href="/blog"
                 color={linkColor[colorMode]}
                 fontWeight="bold"
               >
@@ -250,18 +250,18 @@ export default function Home() {
           /> */}
         </Flex>
         <Flex justify="center" width="100%">
-          <NextLink href="/blog" passHref>
-            <ChakraLink _hover="none" mt={3}>
-              <Button
-                rightIcon={<ArrowForwardIcon />}
-                colorScheme="gray"
-                variant="outline"
-                aria-label="view all blogs"
-              >
-                View All Blogs
-              </Button>
-            </ChakraLink>
-          </NextLink>
+          {/* <NextLink href="/blog" passHref> */}
+          <ChakraLink _hover="none" mt={3}>
+            <Button
+              rightIcon={<ArrowForwardIcon />}
+              colorScheme="gray"
+              variant="outline"
+              aria-label="view all blogs"
+            >
+              Coming Soon !!!
+            </Button>
+          </ChakraLink>
+          {/* </NextLink> */}
         </Flex>
       </Container>
     </>

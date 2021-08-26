@@ -39,10 +39,10 @@ const LINKS = [
     href: "/experience",
     text: "Experience",
   },
-  {
-    href: "/blog",
-    text: "Blog",
-  },
+  // {
+  //   href: "/blog",
+  //   text: "Blog",
+  // },
 ];
 
 const NavContainer = styled(Flex)`
