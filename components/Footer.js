@@ -19,7 +19,7 @@ const Copyright = (props) => (
     <br></br>
     Inspired from{" "}
     <chakra.span fontWeight="semibold" color={linkColor[useColorMode()]}>
-      <a href="https://nextjs.org">@Dakeiser &apos s portfolio</a>
+      <a href="https://github.com/dakeiser">@Dakeiser&apos;s portfolio</a>
     </chakra.span>
   </Text>
 );
