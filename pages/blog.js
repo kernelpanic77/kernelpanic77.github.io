@@ -7,6 +7,7 @@ import {
   Input,
   InputGroup,
   InputRightElement,
+  Center,
 } from "@chakra-ui/react";
 
 import Container from "../components/Container";
@@ -87,7 +88,7 @@ export default function Blog({ posts }) {
                 <SearchIcon color="gray.500" />
               </InputRightElement>
             </InputGroup>
-            {!filteredBlogPosts.length && "No posts found"}
+            {!filteredBlogPosts.length && <Center>Coming Soon!</Center>}
             {filteredBlogPosts.map((frontMatter) => (
               <BlogPost key={frontMatter.title} {...frontMatter} />
             ))}

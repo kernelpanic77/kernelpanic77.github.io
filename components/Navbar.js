@@ -36,12 +36,12 @@ const LINKS = [
     text: "Projects",
   },
   {
-    href: "/blog",
-    text: "Blog",
-  },
-  {
     href: "/experience",
     text: "Experience",
+  },
+  {
+    href: "/blog",
+    text: "Blog",
   },
 ];
 
