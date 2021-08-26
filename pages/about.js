@@ -14,13 +14,13 @@ import Container from "../components/Container";
 import { linkColor, secondaryTextColor } from "../styles/darkMode";
 import InterestTag from "../components/Interest";
 
-const url = "https://rithwiksai.tech/about";
-const title = "About - Rithwik";
+const url = "https://kernelpanic77.github.io/about";
+const title = "About - Ishan";
 const description =
-  "About me! My interests in tech, my favourite places, my music interests and many more";
+  "About me! My interests in software, computer science and different technologies";
 const images = [
   {
-    url: "/images/r.png",
+    url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
     width: 800,
     height: 600,
     alt: "Og Image Alt",

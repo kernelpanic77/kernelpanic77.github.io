@@ -27,7 +27,7 @@ const title = "Home - Ishan";
 const description = "Developer and an undergraduate IIIT Bangalore, India.";
 const images = [
   {
-    url: "/images/r.png",
+    url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
     width: 800,
     height: 600,
     alt: "Og Image Alt",
@@ -69,7 +69,7 @@ export default function Home() {
               boxSize="260px"
               src="pp.jpeg"
               objectFit="cover"
-              alt="Rithwik"
+              alt="Ishan"
               onLoad={() => setImageLoad(true)}
             />
           </Skeleton>
@@ -115,7 +115,7 @@ export default function Home() {
               Pariatur tempor ea mollit eu consequat adipisicing cupidatat sunt
               ex.
               <ChakraLink
-                href="mailto:sai.rithwik@iiitb.ac.in"
+                href="mailto:ishan.shanware@iiitb.ac.in"
                 color={linkColor[colorMode]}
               >
                 email
@@ -141,28 +141,28 @@ export default function Home() {
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="mailto:sai.rithwik@iiitb.ac.in"
+                  href="mailto:ishan.shanware@iiitb.ac.in"
                   aria-label="eMail"
                   icon={<FaRegEnvelope fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://www.linkedin.com/in/sai-rithwik-m/"
+                  href="https://www.linkedin.com/in/ishan-shanware/"
                   aria-label="LinkedIn"
                   icon={<FaLinkedin fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://github.com/DaKeiser"
+                  href="https://github.com/kernelpanic77"
                   aria-label="GitHub"
                   icon={<FaGithub fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://twitter.com/DaKeiser"
+                  href="https://twitter.com/ishanshanware"
                   aria-label="Twitter"
                   icon={<FaTwitter fontSize="20px" />}
                 />

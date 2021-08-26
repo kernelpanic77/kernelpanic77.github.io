@@ -15,12 +15,12 @@ import Container from "../components/Container";
 import ProjectCard from "../components/ProjectCard";
 import ExperienceCard from "../components/ExperienceCard";
 
-const url = "https://rithwiksai.tech/projects";
-const title = "Projects - Rithwik";
+const url = "https://kernelpanic77.github.io/projects";
+const title = "Projects - Ishan";
 const description = "A gallery of the projects I have worked on";
 const images = [
   {
-    url: "/images/r.png",
+    url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
     width: 800,
     height: 600,
     alt: "Og Image Alt",

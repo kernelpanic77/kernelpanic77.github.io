@@ -29,28 +29,28 @@ const SocialMediaLinks = (props) => (
     <IconButton
       borderRadius="10px"
       as="a"
-      href="mailto:sai.rithwik@iiitb.ac.in"
+      href="mailto:ishan.shanware@iiitb.ac.in"
       aria-label="eMail"
       icon={<FaRegEnvelope fontSize="20px" />}
     />
     <IconButton
       borderRadius="10px"
       as="a"
-      href="https://www.linkedin.com/in/sai-rithwik-m/"
+      href="https://www.linkedin.com/in/ishan-shanware/"
       aria-label="LinkedIn"
       icon={<FaLinkedin fontSize="20px" />}
     />
     <IconButton
       borderRadius="10px"
       as="a"
-      href="https://github.com/DaKeiser"
+      href="https://github.com/kernelpanic77"
       aria-label="GitHub"
       icon={<FaGithub fontSize="20px" />}
     />
     <IconButton
       borderRadius="10px"
       as="a"
-      href="https://twitter.com/DaKeiser"
+      href="https://twitter.com/ishanshanware"
       aria-label="Twitter"
       icon={<FaTwitter fontSize="20px" />}
     />
