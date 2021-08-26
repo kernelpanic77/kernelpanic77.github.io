@@ -12,6 +12,7 @@ import {
   Divider,
   IconButton,
   ButtonGroup,
+  Text,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -27,7 +28,7 @@ const title = "Home - Ishan";
 const description = "Developer and an undergraduate IIIT Bangalore, India.";
 const images = [
   {
-    url: "/images/r.png",
+    url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
     width: 800,
     height: 600,
     alt: "Og Image Alt",
@@ -69,7 +70,7 @@ export default function Home() {
               boxSize="260px"
               src="pp.jpeg"
               objectFit="cover"
-              alt="Rithwik"
+              alt="Ishan"
               onLoad={() => setImageLoad(true)}
             />
           </Skeleton>
@@ -97,35 +98,57 @@ export default function Home() {
                 href="https://www.iiitb.ac.in"
                 target="_blank"
                 color={linkColor[colorMode]}
+                fontWeight="bold"
               >
                 IIIT Bangalore
               </ChakraLink>
-              , Voluptate minim sint anim Lorem excepteur consequat aliqua
-              ullamco elit voluptate ullamco. Et in cupidatat laboris nostrud
-              tempor eiusmod aliqua velit. Elit aliquip esse in voluptate in
-              proident fugiat duis. Id minim excepteur minim qui. Sunt ex esse
-              voluptate exercitation laboris culpa eu.
-              <ChakraLink href="/projects" color={linkColor[colorMode]}>
+              , India. I am passionate about building software. My interests are
+              in{" "}
+              <b>Distributed Systems, Software Architectures, and Algorithms</b>{" "}
+              . You can find my{" "}
+              <ChakraLink
+                href="/projects"
+                color={linkColor[colorMode]}
+                fontWeight="bold"
+              >
                 projects
               </ChakraLink>
               ,{" "}
-              <ChakraLink href="/blog" color={linkColor[colorMode]}>
+              <ChakraLink
+                // href="/blog"
+                color={linkColor[colorMode]}
+                fontWeight="bold"
+              >
                 articles
               </ChakraLink>{" "}
-              Pariatur tempor ea mollit eu consequat adipisicing cupidatat sunt
-              ex.
+              on this website. Headover to my{" "}
               <ChakraLink
-                href="mailto:sai.rithwik@iiitb.ac.in"
+                href="/about"
                 color={linkColor[colorMode]}
+                fontWeight="bold"
+              >
+                about
+              </ChakraLink>{" "}
+              page to know more about skills and interests. Feel free to get in
+              touch with me through{" "}
+              <ChakraLink
+                href="mailto:ishan.shanware@iiitb.ac.in"
+                color={linkColor[colorMode]}
+                fontWeight="bold"
               >
                 email
               </ChakraLink>{" "}
               or any social media.
+              <br></br>
+              <b>
+                I am currently looking for Software Developer Internship
+                Opportunities
+              </b>
             </chakra.p>
             <br />
             <Flex justify={["center", "center", "left"]} width="100%">
               <a href="/files/resume.pdf" target="_blank">
-                <ChakraLink _hover="none" mt={8}>
+                <ChakraLink _hover="none" mt={8} fontWeight="bold">
                   <Button
                     leftIcon={<FaRegFileAlt />}
                     colorScheme="gray"
@@ -141,28 +164,28 @@ export default function Home() {
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="mailto:sai.rithwik@iiitb.ac.in"
+                  href="mailto:ishan.shanware@iiitb.ac.in"
                   aria-label="eMail"
                   icon={<FaRegEnvelope fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://www.linkedin.com/in/sai-rithwik-m/"
+                  href="https://www.linkedin.com/in/ishan-shanware/"
                   aria-label="LinkedIn"
                   icon={<FaLinkedin fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://github.com/DaKeiser"
+                  href="https://github.com/kernelpanic77"
                   aria-label="GitHub"
                   icon={<FaGithub fontSize="20px" />}
                 />
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="https://twitter.com/DaKeiser"
+                  href="https://twitter.com/ishanshanware"
                   aria-label="Twitter"
                   icon={<FaTwitter fontSize="20px" />}
                 />
@@ -184,19 +207,19 @@ export default function Home() {
           </Heading>
 
           <ProjectCard
-            title="Mosip"
-            href="https://github.com/DaKeiser/chaos"
-            src="/images/chaos-td.png"
+            title="Hola"
+            href="https://github.com/hola-cisco"
+            src="/images/projects/holaplane.png"
             alt="Chaos"
           >
-            Qui ullamco culpa occaecat officia cupidatat laboris officia labore
-            officia sunt. Deserunt anim voluptate aliqua enim ad nostrud
-            aliquip. Veniam id eiusmod proident et excepteur eu enim duis
-            aliquip ex fugiat quis dolor. Laborum dolor duis Lorem excepteur
-            officia ullamco. Exercitation eiusmod non proident nulla nostrud.
-            Cillum culpa qui reprehenderit id deserunt dolore veniam consequat
-            cupidatat id pariatur veniam do. Dolore magna ea aliqua proident
-            laborum irure nulla aliqua aute velit.
+            Hola is a solution to find best tourist guides at reasonable prices.
+            It provides a larger customer base for Guides and hassle free
+            booking of guides by tourists. Hola has been selected into the
+            project track of Cisco Thingqbator Programme conducted by Cisco, and
+            is currently in the rapid prototyping phase. I am building a
+            scalable backend for the App, using Serverless Framework following a
+            Microservice Architecture, with features such as user locations
+            routing and payment features, etc.
           </ProjectCard>
 
           <Flex justify="center" width="100%">
@@ -227,18 +250,18 @@ export default function Home() {
           /> */}
         </Flex>
         <Flex justify="center" width="100%">
-          <NextLink href="/blog" passHref>
-            <ChakraLink _hover="none" mt={3}>
-              <Button
-                rightIcon={<ArrowForwardIcon />}
-                colorScheme="gray"
-                variant="outline"
-                aria-label="view all blogs"
-              >
-                View All Blogs
-              </Button>
-            </ChakraLink>
-          </NextLink>
+          {/* <NextLink href="/blog" passHref> */}
+          <ChakraLink _hover="none" mt={3}>
+            <Button
+              rightIcon={<ArrowForwardIcon />}
+              colorScheme="gray"
+              variant="outline"
+              aria-label="view all blogs"
+            >
+              Coming Soon !!!
+            </Button>
+          </ChakraLink>
+          {/* </NextLink> */}
         </Flex>
       </Container>
     </>
