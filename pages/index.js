@@ -242,26 +242,26 @@ export default function Home() {
           <Heading letterSpacing="tight" size="lg" fontWeight={700} mb={6}>
             Latest Blogs
           </Heading>
-          {/* <BlogPost
-            title="WhatsApp animated stickers and synchronisation"
-            publishedAt="2021-07-15"
-            summary="Have you ever observed your WhatsApp animated stickers in sync? I wanted to understand how it worked, and whether it was in sync for all users, and here's my observation."
-            slug="whatsapp_stickers"
-          /> */}
+          <BlogPost
+            title="Choice of programming languages for Big Data Systems"
+            publishedAt="2022-08-18"
+            summary="Tried to make an indepth study of the specific needs of big data systems. An analysis of how programming language features have implications on these requirements."
+            slug="big_data_pl"
+          />
         </Flex>
         <Flex justify="center" width="100%">
-          {/* <NextLink href="/blog" passHref> */}
-          <ChakraLink _hover="none" mt={3}>
-            <Button
-              rightIcon={<ArrowForwardIcon />}
-              colorScheme="gray"
-              variant="outline"
-              aria-label="view all blogs"
-            >
-              Coming Soon !!!
-            </Button>
-          </ChakraLink>
-          {/* </NextLink> */}
+          <NextLink href="/blog" passHref>
+            <ChakraLink _hover="none" mt={3}>
+              <Button
+                rightIcon={<ArrowForwardIcon />}
+                colorScheme="gray"
+                variant="outline"
+                aria-label="view all blogs"
+              >
+                First Blog is up !!!
+              </Button>
+            </ChakraLink>
+          </NextLink>
         </Flex>
       </Container>
     </>
