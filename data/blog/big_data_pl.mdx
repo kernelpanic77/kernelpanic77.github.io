@@ -1,0 +1,547 @@
+---
+title: "Choice of Programming Languages for Big Data Systems"
+publishedAt: "2022-08-18"
+summary: "Tried to make an indepth study of the specific needs of big data systems. An analysis of how programming language features have implications on these requirements."
+---
+
+## Some Intro
+
+# Big Data Systems and Programming Languages:
+
+A Study
+
+# Group 14Ishan Shanware
+
+Ghazi Shazan Ahmad
+Pratyush Ranjan
+Supreeth Varadarajan
+
+# Introduction to Big Data Systems
+
+![](img/Programming%20Languages%20Project%2020220.png)
+
+The definition of big data is data that contains greater variety\, arriving in increasing volumes and with more velocity\. Variety\, Volume\, Velocity is also known as the three Vs\.
+
+It is used in [machine learning](https://www.techtarget.com/searchenterpriseai/definition/machine-learning-ML) projects\, [predictive modeling](https://www.techtarget.com/searchenterpriseai/definition/predictive-modeling) and other advanced analytics applications\.
+
+Data collection and processing
+
+Data Management
+
+Computation and Analysis
+
+<span style="color:#232F3E">
+  Data collection consists of messaging systems which are essential in sending
+  the data from a source to a destination based on the publish/subscribe
+  paradigm\. These message brokerage systems\, supply streams of data to stream
+  processing frameworks\.{" "}
+</span>
+
+<span style="color:#232F3E">
+  Stream processing is the practice of taking action on a series of data at the
+  time the data is created\. Stream processing is closely related to real time
+  analytics\, complex event processing\, and streaming analytics\.
+</span> <span style="color:#000000"> </span>
+
+<span style="color:#232F3E">
+  The data collected has to be managed\, which is call Data management\.{" "}
+</span>
+
+<span style="color:#232F3E">
+  It consists of two main parts\, data storage and data retrieval\.Distributed
+  file systems handles the responsibility of large scale data storage\. Data
+  retrieval is handled by NoSQL databases\.{" "}
+</span>
+
+<span style="color:#232F3E">T</span> <span style="color:#232F3E">
+  he final stage of processing the big data is Data Analysis\.{" "}
+</span>
+
+<span style="color:#232F3E">
+  Data Analytics and Data Visualization are the two major subtasks of data
+  analysis\. In analytics\, the data is modeled by using ML algorithms and
+  analyzed using statistical/data mining techniques to obtain hidden patterns
+  from the data\.{" "}
+</span>
+
+![](img/Programming%20Languages%20Project%2020221.png)
+
+![](img/Programming%20Languages%20Project%2020222.png)
+
+![](img/Programming%20Languages%20Project%2020223.png)
+
+![](img/Programming%20Languages%20Project%2020224.png)
+
+![](img/Programming%20Languages%20Project%2020225.png)
+
+![](img/Programming%20Languages%20Project%2020226.png)
+
+![](img/Programming%20Languages%20Project%2020227.png)
+
+# Distributed Computing in Big Data Systems
+
+- Distributed computing is a model in which components of a software system are shared among multiple computers\.
+- Even though the components are spread out across multiple computers\, they are run as one system\. They provide improved efficiency and performance\.
+  - Key Features for Distributed Systems:
+    - Scalability
+    - Concurrency
+    - Transparency
+    - Fault tolerance
+- Distributed Storage and Distributed Processing help address the 4 Vs\.
+- Ideas of distributed computing solve latency issues with management of large quantities of data\.
+- Also helps to store\, retrieve\, and update data in well coordinated manner\.
+- Distributed technologies help manage and process higher variety of data streams\.
+- When dataset is more than few terabytes\, it is necessary to use a distributed system so that can be partitioned across machines\.
+
+![](img/Programming%20Languages%20Project%2020228.png)
+
+![](img/Programming%20Languages%20Project%2020229.png)
+
+# Programming Languages for Distributed Systems
+
+Communication and Synchronization between parallel parts of the program
+
+Exception Handling mechanism brought about by partial failure
+
+Scale\, does the language maintain and support the large scale programs development?
+
+Modularity\, does language supports programs decomposition into suitable units? Reusability\, does the language supports effective program units' reuse?
+
+Portability\, does the language support portable code writing? Or does the code port from one platform to a dissimilar platform without majorchange?
+
+Extendibility relates to the possibility of developing the language and its implementation\, existence of function libraries\, class libraries\,\.\.\. etc
+
+There are many other important features as well…\.\.
+
+![](img/Programming%20Languages%20Project%20202210.png)
+
+![](img/Programming%20Languages%20Project%20202211.png)
+
+![](img/Programming%20Languages%20Project%20202212.png)
+
+# Functional programming in Distributed Systems
+
+![](img/Programming%20Languages%20Project%20202213.png)
+
+# Concurrency in Distributed Systems:
+
+Applications and Services can offer resources that can be shared by clients
+Many clients will access shared resource at the same time
+concurrency is a pretty complex subject. Threads and locks, avoiding issues like race conditions and deadlocks make concurrent programs difficult to right.
+Problem with OOPs approach:
+Mutable State: Object’s method is supposed to mutate it’s internal state
+Mutex lock introduces the problem deadlocks
+To solve the problem, Object oriented code become extremely lengthy
+Functional Programming approach:
+Purity: Avoids side-effects
+Immutability
+Functional languages have data types that don’t mutate.
+
+Erlang and Clojure are 2 functional programming languages used heavily to build distributed systems.
+Erlang is a dynamically typed and often known as a concurrent programming language, and fault tolerance.
+Clojure is also a dynamically typed language, which is known for it’s immutable data structures.
+
+![](img/Programming%20Languages%20Project%20202214.png)
+
+<span style="color:#4DD0E1">public</span>  <span style="color:#ECEFF1"> </span>  <span style="color:#4DD0E1">void</span>  <span style="color:#ECEFF1"> greetingsFromSanta\(</span>  <span style="color:#4DD0E1">int</span>  <span style="color:#ECEFF1"> n\) \{</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#4DD0E1">int</span> <span style="color:#ECEFF1">
+  {" "}
+  i ={" "}
+</span> <span style="color:#FBC02D">0</span> <span style="color:#ECEFF1">
+  ;
+</span>
+
+<span style="color:#ECEFF1">    </span>  <span style="color:#4DD0E1">while</span>  <span style="color:#ECEFF1"> \(i < n\) \{</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#CE93D8">System</span> <span style="color:#ECEFF1">
+  \.out\.print\(
+</span> <span style="color:#9CCC65">"Ho\! "</span> <span style="color:#ECEFF1">
+  \);
+</span>
+
+<span style="color:#ECEFF1"> i = i \+ </span> <span style="color:#FBC02D">
+  1
+</span> <span style="color:#ECEFF1">;</span>
+
+<span style="color:#ECEFF1"> \}</span>
+
+<span style="color:#ECEFF1">\}</span>
+
+<span style="color:#ECEFF1">\(</span> <span style="color:#4DD0E1">defn</span> <span style="color:#ECEFF1">
+  {" "}
+  greetings\-from\-santa \[n\]
+</span>
+
+<span style="color:#ECEFF1"> \(</span> <span style="color:#4DD0E1">if</span> <span style="color:#ECEFF1">
+  {" "}
+  \(
+</span> <span style="color:#4DD0E1">></span> <span style="color:#ECEFF1">
+  {" "}
+  n{" "}
+</span> <span style="color:#FBC02D">0</span> <span style="color:#ECEFF1">
+  \)
+</span>
+
+<span style="color:#ECEFF1"> \(</span> <span style="color:#4DD0E1">do</span>
+
+<span style="color:#ECEFF1"> \(</span> <span style="color:#4DD0E1">print</span> <span style="color:#ECEFF1">
+  {" "}
+</span> <span style="color:#9CCC65">"Ho\! "</span> <span style="color:#ECEFF1">
+  \)
+</span>
+
+<span style="color:#ECEFF1"> \(greetings\-from\-santa \(</span> <span style="color:#4DD0E1">
+  dec
+</span> <span style="color:#ECEFF1"> n\)\)\)\)\)</span>
+
+# Data Stream Processing Frameworks and Message Brokerage Systems
+
+![](img/Programming%20Languages%20Project%20202215.png)
+
+# Apache Storm:
+
+Released by Twitter, Apache Storm is a distributed, open-source network that processes big chunks of data from various sources. The tool analyzes it and updates the results to a UI or any other designated destination, without storing any data.
+Written in Clojure
+generic, immutable data structures and pure functions.
+by Clojure's generic data structures, it is easy to distribute work or data across multiple machines
+When functions (or declarative expressions, e.g. database queries) can be expressed as data structures, they are easier to compose and distribute
+RabbitMQ:
+RabbitMQ is one part of Message Broker that implemented Advance Message Queue Protocol (AMQP), that help your application to communicate each other, when you extends your application scale.
+Used for data collection from application and connected with apache storm for data processing.
+Written in Erlang
+Based on actor model of concurrency
+Let it crash! philosophy
+
+![](img/Programming%20Languages%20Project%20202216.png)
+
+# Data Storage and Management
+
+![](img/Programming%20Languages%20Project%20202217.png)
+
+Apache Hadoop is a collection of open\-source software utilities that facilitates using a network of many computers to solve problems involving massive amounts of data and computation\.
+
+It is designed to scale up from single servers to thousands of machines\, each offering local computation and storage\.
+
+It provides a software framework for distributed storage and processing of big data\.
+
+The core of Apache Hadoop consists of a storage part\, known as Hadoop Distributed File System \(HDFS\)\, and a processing part which is a MapReduce programming model\.
+
+Apache Hadoop is written in Java programming language\.
+
+# Data Management Frameworks
+
+# MapReduce
+
+It is a programming model and an associated implementation for processing and generating big data sets\.
+
+MapReduce libraries have been written in many programming languages\, with different levels of optimization\.
+
+It has its roots in functional programming\.
+
+Mapreduce uses two main functions: Map and Reduce\.
+
+Both are higher order functions\, on which functional programming is based\.
+
+Both functions also have no side effects\, which enables concurrency\. This is also a major feature of functional programming
+
+Hadoop uses MapReduce framework for data management\.
+
+![](img/Programming%20Languages%20Project%20202218.png)
+
+An example of how the mapreduce functions work\.
+
+# Compute Frameworks
+
+![](img/Programming%20Languages%20Project%20202219.png)
+
+# ROOT
+
+Object Oriented Framework built on top of C\+\+
+
+Used for storing and processing large amounts of data produced in high energy physics\.
+
+The TFile class in ROOT is used to store files\.
+
+![](img/Programming%20Languages%20Project%20202220.png)
+
+Special class \- TTrees for storing objects of same class objects\.
+
+TTree class is optimised to reduce disk space and enhance access speed\.
+
+![](img/Programming%20Languages%20Project%20202221.png)
+
+# Compute Frameworks
+
+![](img/Programming%20Languages%20Project%20202222.png)
+
+# Apache Spark
+
+High performance\, general purpose distributed computing framework written in scala which is a statically typed functional programming language\.
+
+RDD \(Resilient Distributed Datasets\) are the fundamental data structure of Spark\.
+
+RDDs are distributed collections that are statically typed and lazily evaluated\.
+
+RDDs come with higher order functions like map\, reduce\, join and filter to manipulate the distributed datasets\.
+
+Higher order functions applied on RDDs are lazily evaluated\.
+
+![](img/Programming%20Languages%20Project%20202223.png)
+
+![](img/Programming%20Languages%20Project%20202224.png)
+
+![](img/Programming%20Languages%20Project%20202225.png)
+
+# Garbage Collection
+
+# Many popular systems for processing “big data” are implemented in high-level programming languages (Java and Scala) and run atop JVM with automatic memory management via garbage collection (GC).
+
+However, high object churn and large heap sizes put severe strain on the garbage collector. As a result, applications underperform significantly: GC increases the runtime of typical data processing tasks by up to 40%.
+
+# Native languages like C/C++ provide a tighter control on memory and performance characteristics of the application than languages with automatic memory management.
+
+A well written C++ program that has intimate knowledge of the memory access patterns and the architecture of the machine can run several times faster than a Java program that depends on garbage collection.
+
+For these reasons, many enterprise developers with massive scalability and performance requirements tend to use C/C++ in their server applications in comparison to Java.
+
+For example, Bloomberg uses Python for much of its data science exploratory work that goes into services delivered in the Bloomberg Terminal. But when it comes to writing the actual programs that feed data to customers in real time, it turned to C++.
+
+# Data Analysis
+
+# Data Analysis is the final stage of the processing of the big data.
+
+There are two subtasks in the task of Data Analysis
+Data Analytics and
+Data Visualization.
+
+In analytics, the goal is to find/predict patterns by modeling the data using ML algorithms and analyzed using statistical/data mining techniques.
+
+#
+
+# The platforms and paradigms used to process ML-related data have changed tremendously over the past decade, due to a range of performance and programmability issues with MapReduce-based systems and the need to execute ML workloads on modern hardware like GPUs.
+
+Mahout and MLlib are the two most popular distributed libraries.
+Mahout -> Apache Hadoop
+MLlib -> Apache Spark
+
+![](img/Programming%20Languages%20Project%20202226.png)
+
+#
+
+# Mahout is one of the more well-known tools for ML. It is written in Java and Scala and used for creating scalable machine learning algorithms.
+
+The algorithms of Mahout are written on top of Hadoop, so it works well in distributed environment.
+Mahout uses the Apache Hadoop library to scale effectively in the cloud.
+Classification algorithms currently offered in Mahout are Logistic Regression, Naïve Bayes, Random Forest, Hidden Markov Models, and Multilayer Perceptron.
+It also includes several MapReduce enabled clustering implementations such as k-means, fuzzy k-means, Canopy, Dirichlet, and Mean-Shift.
+Mahout is probably the best-known framework for collaborative filtering tools, also known as recommendation engines.
+
+![](img/Programming%20Languages%20Project%20202227.png)
+
+# MLlib
+
+# Apache Spark consists of a distributed machine learning library of algorithms known as MLlib. It is written in Scala and use native (C++ based) linear algebra libraries on each node, MLlib includes Java, Scala, and Python APIs.
+
+MLlib covers the same range of learning categories as Mahout, and also adds regression models, which Mahout lacks.
+The library targets large-scale learning settings that benefit from data-parallelism or model-parallelism to store and operate on data or models. MLlib consists of fast and scalable implementations of standard learning algorithms for common learning settings including classification, regression, collaborative filtering, clustering, and dimensionality reduction.
+It also provides a variety of underlying statistics, linear algebra, and optimization primitives
+
+# Julia for ML and Data Analysis
+
+# As compared to Python and R, Julia is a relatively new language. Python was not necessarily designed with parallel computing in mind. Parallel computing is becoming more and more important and more and more widely-used every single day especially for big data systems. Julia is built for scalability and speed of operations when handling large data sets.
+
+Python’s methods require serialization and deserialization of data for parallelizing between threads whereas Julia’s parallelization is much more refined.
+
+Julia uses multiple dispatches as its central programming paradigm.
+
+It supports parallelism in three primary levels, namely:
+Julia coroutines (green threading),
+Multi-threading,
+and multi-core or distributed processing.
+Julia is not interpreted and uses just-in-time (JIT) compilation and type declaration.
+It’s speed is almost as same as native languages like C/C++.
+
+![](img/Programming%20Languages%20Project%20202228.png)
+
+# Case Study: Programming Languages in
+
+Twitter’s Big Data Ecosystem (Understanding Current Choice of Languages)
+
+Process approximately 400 billion events in real time and [generate petabyte \(PB\) scale data every day](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2021/processing-billions-of-events-in-real-time-at-twitter-)\.
+
+They organize the infrastructure and tools of a comprehensive and robust big data platform into three categories \- data processing\, data storage\, and data consumption\.
+
+![](img/Programming%20Languages%20Project%20202229.png)
+
+# Scala at Twitter
+
+- Twitter was once the largest Ruby user in the world\, however in recent years it has moved a lot of code to the JVM\.
+- Both languages are readable and concise\, Object Oriented\, decomposable\.
+- Concurrency
+  - Ruby does not have inbuilt support for concurrency\, comes from external libraries\. Event Machine library\, for concurrency\.
+    - Causes long chain of callbacks\.
+  - Scala has built in concurrency models like the actor model and futures\.
+- Type Systems
+  - Ruby’s dynamic typing allows for rapid prototyping\.
+  - Scala’s Static typing makes the code clearer\, and catches error for production level\.
+- Performance
+  - Expectations: Higher Throughput and Better CPU Usage
+  - Scala performs better than ruby in throughput and hardware utilization\.
+
+![](img/Programming%20Languages%20Project%20202230.png)
+
+# Functional Programming at Twitter with Scala
+
+- Twitter structures concurrent programs around futures
+  - To handle events on large chunks of streaming data\, futures are used
+- Together with HOFs\, Futures can be used to create more complex operations
+- permits defining a future as a function of another\, such that the two are executed sequentially\.
+- For example\, when a user sends a Tweet\, we first need to see if that user is within the hourly rate limits before writing the Tweet to a database\.
+
+<span style="color:#4DD0E1">def</span> <span style="color:#ECEFF1">
+  {" "}
+  isRateLimited\(user:{" "}
+</span> <span style="color:#CE93D8">Long</span> <span style="color:#ECEFF1">
+  \): Future\[
+</span> <span style="color:#CE93D8">Boolean</span> <span style="color:#ECEFF1">
+  \] = \.\.\.
+</span>
+
+<span style="color:#4DD0E1">def</span> <span style="color:#ECEFF1">
+  {" "}
+  writeTweet\(user:{" "}
+</span> <span style="color:#CE93D8">Long</span> <span style="color:#ECEFF1">
+  \, tweet:{" "}
+</span> <span style="color:#CE93D8">String</span> <span style="color:#ECEFF1">
+  \): Future\[
+</span> <span style="color:#CE93D8">Unit</span> <span style="color:#ECEFF1">
+  \] = \.\.\.
+</span>
+
+<span style="color:#4DD0E1">val</span> <span style="color:#ECEFF1">
+  {" "}
+  user ={" "}
+</span> <span style="color:#FBC02D">12L</span>
+
+<span style="color:#4DD0E1">val</span> <span style="color:#ECEFF1">
+  {" "}
+  tweet:{" "}
+</span> <span style="color:#CE93D8">String</span> <span style="color:#ECEFF1">
+  {" "}
+  ={" "}
+</span> <span style="color:#9CCC65">"just setting up my twitter"</span>
+
+<span style="color:#4DD0E1">val</span> <span style="color:#ECEFF1">
+  {" "}
+  done: Future\[
+</span> <span style="color:#CE93D8">Unit</span> <span style="color:#ECEFF1">
+  \] =
+</span>
+
+<span style="color:#ECEFF1">  isRateLimited\(user\)\.flatMap \{</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#4DD0E1">case</span> <span style="color:#ECEFF1">
+  {" "}
+</span> <span style="color:#4DD0E1">true</span> <span style="color:#ECEFF1">
+  {" "}
+</span> <span style="color:#4DD0E1">=></span> <span style="color:#ECEFF1">
+  {" "}
+  Future\.exception\(
+</span> <span style="color:#4DD0E1">new </span> <span style="color:#ECEFF1">
+  RateLimitingError\)
+</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#4DD0E1">case</span> <span style="color:#ECEFF1">
+  {" "}
+</span> <span style="color:#4DD0E1">false</span> <span style="color:#ECEFF1">
+  {" "}
+</span> <span style="color:#4DD0E1">=></span> <span style="color:#ECEFF1">
+  {" "}
+  writeTweet\(user\, tweet\)
+</span>
+
+<span style="color:#ECEFF1"> \}</span>
+
+<span style="color:#4DD0E1">val</span> <span style="color:#ECEFF1">
+  {" "}
+  count: Future\[
+</span> <span style="color:#CE93D8">Int</span> <span style="color:#ECEFF1">
+  \] = getCount\(\)
+</span>
+
+<span style="color:#ECEFF1">count\.respond \{</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#4DD0E1">case</span> <span style="color:#ECEFF1">
+  {" "}
+  Return\(value\){" "}
+</span> <span style="color:#4DD0E1">=></span>
+
+<span style="color:#ECEFF1"> println\(s</span> <span style="color:#9CCC65">
+  "The count was{" "}
+</span> <span style="color:#ECEFF1">$value</span> <span style="color:#9CCC65">
+  "
+</span> <span style="color:#ECEFF1">\)</span>
+
+<span style="color:#ECEFF1"> </span> <span style="color:#4DD0E1">case</span> <span style="color:#ECEFF1">
+  {" "}
+  Throw\(exc\){" "}
+</span> <span style="color:#4DD0E1">=></span>
+
+<span style="color:#ECEFF1"> println\(s</span> <span style="color:#9CCC65">
+  "getCount failed with{" "}
+</span> <span style="color:#ECEFF1">$exc</span> <span style="color:#9CCC65">
+  "
+</span> <span style="color:#ECEFF1">\)</span>
+
+<span style="color:#ECEFF1">\}</span>
+
+# Scala For Big Data
+
+- Scala is all about scalability and fault tolerance\, and that means it works well with huge amounts of data\.
+- A lot of data analytics software offers support for Scala\, making it easy to integrate the software into your system\.
+- It’s one of the standout features of Scala because something like Ruby\, which Twitter used before transition to Scala\, doesn’t have the ability to support big data effectively\.
+- Apache Spark is implemented in Scala\.
+  - Make use of HOFs
+- Apache Kafka another message brokerage system is also written in Scala\.
+  - Apache Kafka is a distributed data store optimized for ingesting and processing streaming data in real\-time\.
+  - A Kafka **topic** is an immutable log of events \(sequences\)\.
+    - Immutable Classes of Scala help make streaming data
+
+![](img/Programming%20Languages%20Project%20202231.png)
+
+# Golang for developing Big Data Frameworks
+
+GO has been developed for the modern times\.
+
+GO is built for multi core machines to maximise parallelism for the concurrent programs\.
+
+GO has C like syntax\, is statically typed and has a super fast compiler\.
+
+GO overcomes the shortcomings of C\+\+ and includes features like garbage collector\, memory safety and structural typing\.
+
+Difficult to maintain code consistency in Scala\, easier in GO\.
+
+![](img/Programming%20Languages%20Project%20202232.png)
+
+# Julia is an excellent choice for numerical computing and it takes lesser time for big and complex codes.
+
+Julia undoubtedly beats Python in the performance and speed category.
+
+But there are certain drawbacks of Julia as well:
+Smaller community
+Less ML libraries
+
+![](img/Programming%20Languages%20Project%20202233.png)
+
+# References
+
+Holden Karau\. Rachel Warren\. High Performance Spark\. Oreilly\.
+
+René Brun\. Fons Rademakers\. Suzanne Panacek\. Root\, an object oriented data analysis framework\. CERN\.
+
+Marius Eriksen\. Functional at Scale\.
+
+Rao _et al_ \. The big data system\, components\, tools and technologies: a survey
+
+Debasish Ghosh\. Programming languages impact on development of distributed systems\.
