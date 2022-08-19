@@ -68,7 +68,7 @@ export default function Home() {
             <Image
               borderRadius="2xl"
               boxSize="260px"
-              src="20220603_103227.jpeg"
+              src="20220603_103227.jpg"
               objectFit="cover"
               alt="Ishan"
               onLoad={() => setImageLoad(true)}
