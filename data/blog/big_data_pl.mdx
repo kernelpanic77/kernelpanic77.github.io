@@ -4,8 +4,6 @@ publishedAt: "2022-08-18"
 summary: "Tried to make an indepth study of the specific needs of big data systems. An analysis of how programming language features have implications on these requirements."
 ---
 
-# Choice of Programming Languages for Big Data Sytems
-
 Data collection consists of messaging systems which are essential in sending the data from a source to a destination based on the publish/subscribe paradigm.
 
 ![intro](/blogs/big_data_pl/intro.png)
@@ -22,19 +20,20 @@ Data collection consists of messaging systems which are essential in sending the
     analyzed using statistical/data mining techniques to obtain hidden patterns
     from the data\.
 
-![big data landscape](blogs/big-data.png)
+![big data landscape](blogs/big_data_pl/big-data.png)
 
 - Distributed computing is a model in which components of a software system are shared among multiple computers\.
 - Even though the components are spread out across multiple computers\, they are run as one system\. They provide improved efficiency and performance\.
 
-Key Features for Distributed Systems
+## Key Features for Distributed Systems
 
 - Scalability
 - Concurrency
 - Transparency
 - Fault tolerance
 
-- Distributed Storage and Distributed Processing help address the 4 Vs\.
+### Distributed Storage and Distributed Processing help address the 4 Vs\.
+
 - Ideas of distributed computing solve latency issues with management of large quantities of data\.
 - Also helps to store\, retrieve\, and update data in well coordinated manner\.
 - Distributed technologies help manage and process higher variety of data streams\.
@@ -49,15 +48,15 @@ Programming Languages for Distributed Systems
 - Extendibility relates to the possibility of developing the language and its implementation\, existence of function libraries\, class libraries\,\.\.\. etc
   There are many other important features as well…\.\.
 
-Functional programming in Distributed Systems
+## Functional programming in Distributed Systems
 
-Concurrency in Distributed Systems
+### Concurrency in Distributed Systems
 
 - Applications and Services can offer resources that can be shared by clients. Many clients will access shared resource at the same time concurrency is a pretty complex subject.
 - Threads and locks, avoiding issues like race conditions and deadlocks make concurrent programs
   difficult to right.
 
-Problem with OOPs approach
+### Problem with OOPs approach
 
 - Mutable State
   - Object’s method is supposed to mutate it’s internal state Mutex lock
@@ -132,7 +131,7 @@ MapReduce
 - Hadoop uses MapReduce framework for data management\.
   An example of how the mapreduce functions work\.
 
-![map reduce football](/blogs/big_data_pl/download1-png)
+![map reduce football](/blogs/big_data_pl/download-1.png)
 
 Compute Frameworks
 
