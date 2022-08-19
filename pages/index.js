@@ -25,7 +25,7 @@ import { FaRegEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const url = "https://google.com";
 const title = "Home - Ishan";
-const description = "Developer and an undergraduate IIIT Bangalore, India.";
+const description = "Computer Science undergrad @IIIT Bangalore, India.";
 const images = [
   {
     url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
@@ -68,7 +68,7 @@ export default function Home() {
             <Image
               borderRadius="2xl"
               boxSize="260px"
-              src="pp.jpeg"
+              src="20220603_103227.jpeg"
               objectFit="cover"
               alt="Ishan"
               onLoad={() => setImageLoad(true)}
@@ -104,7 +104,10 @@ export default function Home() {
               </ChakraLink>
               , India. I am passionate about building software. My interests are
               in{" "}
-              <b>Distributed Systems, Software Architectures, and Algorithms</b>{" "}
+              <b>
+                Distributed Systems, Scalable Architectures and Applied Data
+                Science
+              </b>{" "}
               . You can find my{" "}
               <ChakraLink
                 href="/projects"
@@ -140,10 +143,10 @@ export default function Home() {
               </ChakraLink>{" "}
               or any social media.
               <br></br>
-              <b>
+              {/* <b>
                 I am currently looking for Software Developer Internship
                 Opportunities
-              </b>
+              </b> */}
             </chakra.p>
             <br />
             <Flex justify={["center", "center", "left"]} width="100%">
@@ -258,7 +261,7 @@ export default function Home() {
                 variant="outline"
                 aria-label="view all blogs"
               >
-                First Blog is up !!!
+                Blogs
               </Button>
             </ChakraLink>
           </NextLink>
