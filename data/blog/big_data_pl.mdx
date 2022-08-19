@@ -73,7 +73,7 @@ Problem with OOPs approach
 
 **Java Code**
 
-```
+```java
 public  void greetingsFromSanta(int n) {
 	int i = 0;
 	while (i < n) {
@@ -85,7 +85,7 @@ public  void greetingsFromSanta(int n) {
 
 **Clojure Code**
 
-```
+```clojure
 (defn greetings-from-santa [n]
 	(if (> n 0)
 		(do
@@ -237,7 +237,7 @@ Functional Programming at Twitter with Scala
 
 **Functional Programming using Futures in Scala**
 
-```
+```scala
 val count:Future[Int] = getCount()
 count.respond {
 	case Return(value) =>
@@ -247,7 +247,7 @@ count.respond {
 }
 ```
 
-```
+```scala
 def isRateLimited(user:Long):Future[Boolean] = ...
 def writeTweet(user:Long, tweet:String):Future[Unit] = ...
 
