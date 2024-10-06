@@ -9,8 +9,7 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
     const [opacity, setOpacity] = useState(0)
 
     return (
-        <NextLink href={`blog/${slug}`} passHref>
-            <Link 
+        <NextLink href={`blog/${slug}`} 
                 w="100%"
                 _hover={{
                     boxShadow: shadowColor[colorMode],
@@ -20,7 +19,7 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
                 mb={6}
                 onMouseOver={() => setOpacity(1)}
                 onMouseLeave={() => setOpacity(0)}
-            >
+                passHref>
                 <Flex
                     align="center"
                     border="1px solid"
@@ -54,7 +53,8 @@ const BlogPost = ({ title, publishedAt, summary, slug }) => {
                     <Text color={secondaryTextColor[colorMode]}>{summary}</Text>
                     </Stack>
                 </Flex>
-            </Link>
+            {/* </Link> */}
+            {/* </span> */}
         </NextLink>
     )
 }

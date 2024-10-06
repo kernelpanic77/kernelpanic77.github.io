@@ -21,10 +21,11 @@ export default function BlogLayout({ children, frontMatter }) {
   };
   const router = useRouter();
   const slug = router.asPath.replace("/blog", "");
+  // console.log(children)
   return (
     <Container>
       <Head>
-        <title>${slug} - Blog - Ishan</title>
+        <title>`${slug} - Blog - Ishan`</title>
       </Head>
       <Stack
         as="article"

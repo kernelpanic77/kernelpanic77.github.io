@@ -23,26 +23,18 @@ import React from "react";
 // import useSound from "use-sound";
 
 const LINKS = [
-  // {
-  //   href: "/",
-  //   text: "Home",
-  // },
   {
     href: "/about",
     text: "About",
   },
   {
-    href: "/projects",
-    text: "Projects",
-  },
-  {
     href: "/experience",
     text: "Experience",
   },
-  // {
-  //   href: "/blog",
-  //   text: "Blog",
-  // },
+  {
+    href: "/blog",  
+    text: "Articles"
+  }
 ];
 
 const NavContainer = styled(Flex)`
@@ -63,7 +55,7 @@ const Navbar = () => {
   //     },
   // });
   const bg = useColorModeValue(navBgColor.light, navBgColor.dark);
-  const isBigScreen = useMediaQuery({ minWidth: 600 });
+  const isBigScreen = false;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const getLink = ({ href, text }) => (
@@ -107,7 +99,8 @@ const Navbar = () => {
           aria-label="toggle ham"
           icon={<HamburgerIcon />}
           onClick={onOpen}
-        />
+        >
+        </IconButton>
       )}
 
       {
@@ -122,7 +115,7 @@ const Navbar = () => {
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>
-            <DrawerCloseButton />
+            <DrawerCloseButton></DrawerCloseButton>
             <DrawerBody>
               <Flex
                 direction="column"

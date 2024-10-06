@@ -30,7 +30,7 @@ const ExperienceCard = ({
 
   const [opacity, setOpacity] = useState(0);
   return (
-    <Link
+      <Link
       href={companyLink}
       title={companyName}
       isExternal

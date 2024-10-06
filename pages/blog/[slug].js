@@ -2,12 +2,12 @@ import { MDXRemote } from 'next-mdx-remote'
 import { getFiles, getFileBySlug } from '../../lib/mdx'
 import BlogLayout from '../../layouts/blog'
 import MDXComponents from '../../components/MDXComponents'
-
+// import {Susep}
 export default function Blog({ mdxSource, frontMatter }) {
-    const content = <MDXRemote {...mdxSource} components={MDXComponents} />
-    // console.log(content)
+    // console.log(mdxSource)
+    const content = <MDXRemote {...mdxSource}></MDXRemote>
     // console.log(frontMatter)
-    return (<BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>)
+    return (<BlogLayout children={content} frontMatter={frontMatter}></BlogLayout>)
 }
 
 export async function getStaticPaths() {

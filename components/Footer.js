@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { FaRegEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import * as React from "react";
-import { Text } from "@chakra-ui/layout";
+import { Text } from "@chakra-ui/react";
 import { linkColor } from "../styles/darkMode";
 import NextLink from "next/link";
 

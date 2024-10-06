@@ -13,6 +13,7 @@ import {
   IconButton,
   ButtonGroup,
   Text,
+  Spacer,
 } from "@chakra-ui/react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { FaRegFileAlt } from "react-icons/fa";
@@ -25,7 +26,7 @@ import { FaRegEnvelope, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const url = "https://google.com";
 const title = "Home - Ishan";
-const description = "Computer Science undergrad @IIIT Bangalore, India.";
+const description = "Engineering @Webex, CS Grad @IIIT Bangalore, India.";
 const images = [
   {
     url: "https://avatars.githubusercontent.com/u/42925218?s=60&v=4",
@@ -36,7 +37,7 @@ const images = [
 ];
 
 export default function Home() {
-  const [imageLoad, setImageLoad] = useState(false);
+  const [imageLoad, setImageLoad] = useState(true);
   const { colorMode } = useColorMode();
   return (
     <>
@@ -68,11 +69,12 @@ export default function Home() {
             <Image
               borderRadius="2xl"
               boxSize="260px"
-              src="20220603_103227.jpg"
+              src="/ishan.jpg"
               objectFit="cover"
               alt="Ishan"
-              onLoad={() => setImageLoad(true)}
+              loading={"eager"}
             />
+            
           </Skeleton>
           <Flex
             alignSelf="center"
@@ -93,7 +95,7 @@ export default function Home() {
               fontSize="l"
               mt={2}
             >
-              I&apos;m a Computer Science undergraduate at{" "}
+              I&apos;m a Computer Science grad from{" "}
               <ChakraLink
                 href="https://www.iiitb.ac.in"
                 target="_blank"
@@ -102,46 +104,29 @@ export default function Home() {
               >
                 IIIT Bangalore
               </ChakraLink>
-              , India. I am passionate about building software. My interests are
+              , India. I am passionate about building software. My primary interests are
               in{" "}
               <b>
                 Distributed Systems, Scalable Architectures and Applied Data
-                Science
-              </b>{" "}
-              . You can find my{" "}
-              <ChakraLink
-                href="/projects"
-                color={linkColor[colorMode]}
-                fontWeight="bold"
-              >
-                projects
-              </ChakraLink>
-              ,{" "}
-              <ChakraLink
-                // href="/blog"
-                color={linkColor[colorMode]}
-                fontWeight="bold"
-              >
-                articles
-              </ChakraLink>{" "}
-              on this website. Headover to my{" "}
+                Science.
+              </b>
+              {" "}Learn more about my background and interests by visiting{" "}
               <ChakraLink
                 href="/about"
                 color={linkColor[colorMode]}
                 fontWeight="bold"
               >
                 about
-              </ChakraLink>{" "}
-              page to know more about skills and interests. Feel free to get in
-              touch with me through{" "}
+              </ChakraLink>.
+              On my website, you can explore my projects and articles, as well as a collection of topics and technologies that I find intriguing and enjoy exploring in my spare time.
+              I am always eager to collaborate on interesting projects, so please feel free to reach out to me via {" "}
               <ChakraLink
-                href="mailto:ishan.shanware@iiitb.ac.in"
+                href="mailto:shanware.ishan@gmail.com"
                 color={linkColor[colorMode]}
                 fontWeight="bold"
               >
                 email
-              </ChakraLink>{" "}
-              or any social media.
+              </ChakraLink>{" "} or any social media platform.
               <br></br>
               {/* <b>
                 I am currently looking for Software Developer Internship
@@ -149,25 +134,28 @@ export default function Home() {
               </b> */}
             </chakra.p>
             <br />
-            <Flex justify={["center", "center", "left"]} width="100%">
-              <a href="/files/resume.pdf" target="_blank">
-                <ChakraLink _hover="none" mt={8} fontWeight="bold">
-                  <Button
-                    leftIcon={<FaRegFileAlt />}
-                    colorScheme="gray"
-                    variant="outline"
-                    aria-label="view all projects"
-                  >
-                    My Resume
-                  </Button>
-                </ChakraLink>
-              </a>
+            <Flex alignItems='center' width="100%">
+              {/* <a href= > */}
+                {/* <span> */}
+              <ChakraLink _hover="none" mt={8} fontWeight="bold" to="/files/resume.pdf" target="_blank" marginBottom={6} paddingRight={2} >
+                <Button
+                  leftIcon={<FaRegFileAlt />}
+                  colorScheme="gray"
+                  variant="outline"
+                  aria-label="view all projects"
+                >
+                  My Resume
+                </Button>
+              </ChakraLink>
+                {/* </span> */}
+              {/* </a> */}
+              {/* <Spacer></Spacer> */}
 
               <ButtonGroup variant="ghost" color="gray.600">
                 <IconButton
                   borderRadius="10px"
                   as="a"
-                  href="mailto:ishan.shanware@iiitb.ac.in"
+                  href="mailto:shanware.ishan@gmail.com"
                   aria-label="eMail"
                   icon={<FaRegEnvelope fontSize="20px" />}
                 />
@@ -225,18 +213,20 @@ export default function Home() {
             routing and payment features, etc.
           </ProjectCard>
 
-          <Flex justify="center" width="100%">
-            <NextLink href="/projects" passHref>
-              <ChakraLink _hover="none" mt={8}>
-                <Button
-                  rightIcon={<ArrowForwardIcon />}
-                  colorScheme="gray"
-                  variant="outline"
-                  aria-label="view all projects"
-                >
-                  View All Projects
-                </Button>
-              </ChakraLink>
+          <Flex justify="center" width="100%" marginTop={5}>
+            <NextLink href="/projects" _hover="none" mt={8} passHref>
+              {/* <span> */}
+                {/* <ChakraLink > */}
+                  <Button
+                    rightIcon={<ArrowForwardIcon />}
+                    colorScheme="gray"
+                    variant="outline"
+                    aria-label="view all projects"
+                  >
+                    View All Projects
+                  </Button>
+                {/* </ChakraLink> */}
+              {/* </span> */}
             </NextLink>
           </Flex>
 
@@ -252,18 +242,20 @@ export default function Home() {
             slug="big_data_pl"
           />
         </Flex>
-        <Flex justify="center" width="100%">
-          <NextLink href="/blog" passHref>
-            <ChakraLink _hover="none" mt={3}>
-              <Button
-                rightIcon={<ArrowForwardIcon />}
-                colorScheme="gray"
-                variant="outline"
-                aria-label="view all blogs"
-              >
-                Blogs
-              </Button>
-            </ChakraLink>
+        <Flex justify="center" width="100%" marginTop={5}>
+          <NextLink href="/blog" _hover="none" mt={3} passHref>
+            {/* <span> */}
+              {/* <ChakraLink > */}
+                <Button
+                  rightIcon={<ArrowForwardIcon />}
+                  colorScheme="gray"
+                  variant="outline"
+                  aria-label="view all blogs"
+                >
+                  Blogs
+                </Button>
+              {/* </ChakraLink> */}
+            {/* </span> */}
           </NextLink>
         </Flex>
       </Container>

@@ -14,14 +14,13 @@ import {
   OrderedList,
   ListItem,
   chakra,
-  // Image
 } from "@chakra-ui/react";
 import { jsx } from "@emotion/react";
 import Image from "./ChakraNextImage";
 import { secondaryTextColor } from "../styles/darkMode";
-
 import NextLink from "next/link";
 
+// Custom Link component to handle both internal and external links
 const CustomLink = (props) => {
   const { colorMode } = useColorMode();
   const color = {
@@ -35,7 +34,7 @@ const CustomLink = (props) => {
   if (isInternalLink) {
     return (
       <NextLink href={href} passHref>
-        <Link color={color[colorMode]} {...props} />
+        <Link color={color[colorMode]} {...props}></Link>
       </NextLink>
     );
   }
@@ -43,6 +42,7 @@ const CustomLink = (props) => {
   return <Link color={color[colorMode]} isExternal {...props} />;
 };
 
+// Custom Quote component with alert styling based on color mode
 const Quote = (props) => {
   const { colorMode } = useColorMode();
   const bgColor = {
@@ -68,11 +68,12 @@ const Quote = (props) => {
   );
 };
 
+// DocsHeading component with anchor link functionality
 const DocsHeading = (props) => (
   <Heading
     css={{
       scrollMarginTop: "100px",
-      scrollSnapMargin: "100px", // Safari
+      scrollSnapMargin: "100px", // Safari support
       "&[id]": {
         pointerEvents: "none",
       },
@@ -113,6 +114,7 @@ const DocsHeading = (props) => (
   </Heading>
 );
 
+// Custom Text component to handle secondary text color based on the theme
 const CustomText = (props) => {
   const { colorMode } = useColorMode();
   return (
@@ -126,6 +128,7 @@ const CustomText = (props) => {
   );
 };
 
+// Horizontal Rule (Divider) component with dynamic border color based on theme
 const Hr = () => {
   const { colorMode } = useColorMode();
   const borderColor = {
@@ -136,22 +139,21 @@ const Hr = () => {
   return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
 };
 
-const CUl = ({ children }) => {
-  return (
-    <UnorderedList pl={4} ml={2} fontSize="md" spacing={"4px"} mt={3}>
-      {children}
-    </UnorderedList>
-  );
-};
+// Unordered List (UL) component
+const CUl = ({ children }) => (
+  <UnorderedList pl={4} ml={2} fontSize="md" spacing={"4px"} mt={3}>
+    {children}
+  </UnorderedList>
+);
 
-const COl = ({ children }) => {
-  return (
-    <OrderedList pl={4} ml={2} fontSize="md" spacing={"4px"} mt={3}>
-      {children}
-    </OrderedList>
-  );
-};
+// Ordered List (OL) component
+const COl = ({ children }) => (
+  <OrderedList pl={4} ml={2} fontSize="md" spacing={"4px"} mt={3}>
+    {children}
+  </OrderedList>
+);
 
+// List Item (LI) component
 const CLi = ({ children }) => {
   const { colorMode } = useColorMode();
   return (
@@ -163,6 +165,7 @@ const CLi = ({ children }) => {
   );
 };
 
+// MDXComponents mapping for customizing elements
 const MDXComponents = {
   h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,

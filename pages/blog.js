@@ -9,6 +9,7 @@ import {
   InputRightElement,
   Center,
 } from "@chakra-ui/react";
+import { serialize } from 'next-mdx-remote/serialize'
 
 import Container from "../components/Container";
 import { getAllFilesFrontMatter } from "../lib/mdx";
@@ -101,6 +102,6 @@ export default function Blog({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("blog");
-
+  // const mdxSource = await serialize(posts)
   return { props: { posts } };
 }

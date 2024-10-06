@@ -36,8 +36,9 @@ export default function Custom404() {
       <Container>
         <Heading>404 - Page Not Found!!!</Heading>
         <Flex justify="center" width="100%">
-          <NextLink href="/" passHref>
-            <ChakraLink _hover="none" mt={8}>
+          <NextLink href="/" _hover="none" mt={8} passHref>
+            {/* <span>
+            <ChakraLink > */}
               <Button
                 rightIcon={<ArrowForwardIcon />}
                 colorScheme="gray"
@@ -46,7 +47,8 @@ export default function Custom404() {
               >
                 TAKE ME HOME!!!
               </Button>
-            </ChakraLink>
+            {/* </ChakraLink>
+            </span> */}
           </NextLink>
         </Flex>
       </Container>
