@@ -3,11 +3,12 @@ import { getFiles, getFileBySlug } from '../../lib/mdx'
 import BlogLayout from '../../layouts/blog'
 import MDXComponents from '../../components/MDXComponents'
 // import {Susep}
+
 export default function Blog({ mdxSource, frontMatter }) {
     // console.log(mdxSource)
     const content = <MDXRemote {...mdxSource}></MDXRemote>
     // console.log(frontMatter)
-    return (<BlogLayout children={content} frontMatter={frontMatter}></BlogLayout>)
+    return (<BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>)
 }
 
 export async function getStaticPaths() {
